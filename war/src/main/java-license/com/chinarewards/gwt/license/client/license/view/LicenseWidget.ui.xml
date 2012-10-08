@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:d='urn:import:com.google.gwt.user.datepicker.client'>
+
+	<ui:style src="new2.css" field="new2"></ui:style>
+
+	<g:HTMLPanel styleName="{new2.frame-wrap}">
+		<!--面包屑 [[ -->
+		<g:FlowPanel ui:field="breadCrumbs" />
+		<!--面包屑 ]] -->
+
+		<!-- 1内容 -->
+		<div class="{new2.content-wrap}">
+			<div class="{new2.form}">
+
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						客户识别号：
+					</label>
+					<div class="{new2.element}">
+						<g:TextBox maxLength="20" ui:field="corporationId"
+							styleName="{new2.text}" />
+						<g:Hidden ui:field="id"></g:Hidden>
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						<span style="color:red">*</span>
+						客户名称：
+					</label>
+					<div class="{new2.element}">
+						<g:TextBox maxLength="20" ui:field="corporationName"
+							styleName="{new2.text}" />
+
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">授权类型：</label>
+					<div class="{new2.element}">
+						<g:ListBox ui:field="licenseType" styleName="{new2.text}" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+					<span style="color:red">*</span>
+						最大用户数：
+					</label>
+					<div class="{new2.element}">
+						<g:TextBox maxLength="20" ui:field="staffNumber"
+							styleName="{new2.text}" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						绑定网卡：
+					</label>
+					<div class="{new2.element}">
+						<g:TextBox maxLength="20" ui:field="macaddress"
+							styleName="{new2.text}" />
+						多个网卡以"|"分隔
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						<span style="color:red">*</span>
+						有效期：
+					</label>
+					<div class="{new2.element}">
+						<d:DateBox ui:field="notafter" styleName="{new2.text}" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						说明：
+					</label>
+					<div class="{new2.element}">
+						<g:TextBox ui:field="description" styleName="{new2.text}" />
+					</div>
+				</div>
+
+				<span class="{new2.cutline}"></span>
+				<div class="{new2.form-line} {new2.form-line-btn}">
+					<div class="{new2.element}">
+
+						<span class="{new2.btn}">
+							<g:Button ui:field="save">保存</g:Button>
+						</span>
+						<span class="{new2.nbsp}"></span>
+						<span class="{new2.btn}">
+							<g:Button ui:field="back" styleName="button-ok">返回 </g:Button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

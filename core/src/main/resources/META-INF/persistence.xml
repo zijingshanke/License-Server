@@ -1,0 +1,38 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="license" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- JPA entities must be registered here -->
+
+		<!-- user -->
+		<class>com.chinarewards.license.domain.user.SysUser</class>
+		<class>com.chinarewards.license.domain.user.SysRole</class>
+		<class>com.chinarewards.license.domain.user.SysUserRole</class>
+
+		<!-- org -->
+		<class>com.chinarewards.license.domain.org.OrgInit</class>
+		<class>com.chinarewards.license.domain.org.Organization</class>
+		<class>com.chinarewards.license.domain.org.Corporation</class>
+		<class>com.chinarewards.license.domain.org.Industry</class>
+		<class>com.chinarewards.license.domain.org.OrgPolicy</class>	
+		
+		<!-- license -->	
+		<class>com.chinarewards.license.domain.license.License</class>
+		
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url" value="jdbc:hsqldb:hsql://localhost:9001/license" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.show_sql" value="false" />
+
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,10 @@
+/.settings
+/target
+.classpath
+.project
+/.gwt
+/upload
+/core/target
+/model/target
+/war/target
+/ear/target

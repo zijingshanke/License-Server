@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+@external .textmy,.preview;
+@sprite .textmy{ gwt-image: "input_text"; border:1px solid #ccc; width:450px; color:#666; line-height:20px; vertical-align:middle; color:#666; margin-right:5px;}
+
+/*新增基本页*/
+.detail-content{width:97%; min-height:380px; height:auto!important; heigt:380px; padding:0px; border:1px solid #ccccff; margin:0 auto; background:#fbfdff; margin-top:8px; position:relative; clear:both}
+.detail-content .setDetail{ width:97%; margin:15px auto; position:relative}
+.detail-content .setDetail h3{ font-size:14px; font-weight:bold; color:#444; display:block; height:22px; line-height:22px;}
+.detail-content .setDetail div.mmdiv{ border:1px solid #ccccff; background-color:#fff; position:relative; width:100%; padding:10px 0px; }
+.detail-content .setDetail table.mmtable{ border:1px solid #ccccff; background-color:#fff; position:relative}
+.detail-content .setDetail table.mmtable td{ height:25px; line-height:25px; font-size:12px; padding-top:3px; padding-bottom:3px;}
+.detail-content .setDetail table.mmtable .title{ background-color:#eaf4ff; text-align:right; width:120px;}
+.detail-content .setDetail table.mmtable .title span{ color:#F00}
+.detail-content .setDetail table.mmtable .intext{ text-align:left; padding-left:5px; width:500px}
+.detail-content .setDetail table.mmtable textarea.text{ text-align:left; padding-left:5px; height:auto!important; }
+
+#noPaddingTd {height:25px; line-height:25px; font-size:12px;padding-top:0px; padding-bottom:0px;}
+@sprite .preview{ width:auto;height:26px; color:#cc3300; gwt-image:"preview_bg"; vertical-align:middle; padding: 0px 0px 0px 12px; float:left; z-index:99;position:relative}
+a.preview:link {font-size: 12px;color: #cc3300; line-height:26px;text-decoration: none;}
+a.preview:visited {font-size: 12px;color: #cc3300;line-height:26px;text-decoration: none;}
+a.preview:hover {font-size: 12px;color: #cc3300;line-height:26px;text-decoration: underline;}
+a.preview:active {font-size: 12px;color: #cc3300;line-height:26px;text-decoration: underline;}
+.preview span{ height:26px;  cursor: pointer; padding: 0px 25px 0px 0; float:left}
+
+.hiddenMe{
+	display: none;
+}

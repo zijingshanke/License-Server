@@ -1,0 +1,179 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.chinarewards</groupId>
+		<artifactId>license-server</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.chinarewards</groupId>
+	<artifactId>license-server-ear</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>ear</packaging>
+	<name>License-Server Application EAR</name>
+	<description>License-Server Application EAR</description>
+	<url>http://project.dev.china-rewards.com/hr/ear/</url>
+	<issueManagement>
+		<system>Bugzilla</system>
+		<url>https://bugs.dev.china-rewards.com</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Hudson CI</system>
+		<url>http://build.dev.china-rewards.com/</url>
+	</ciManagement>
+	<inceptionYear>2010</inceptionYear>
+	<scm>
+		<connection>scm:cvs:ext:cvs.dev.china-rewards.com:/cvsroot:hr/ear</connection>
+		<developerConnection>scm:cvs:ext:cvs.dev.china-rewards.com:/cvsroot:hr/ear</developerConnection>
+		<url>http://cvs.dev.china-rewards.com/viewvc/hr/ear/</url>
+    </scm>
+	<distributionManagement>
+		<site>
+			<id>project</id>
+			<name>Project Website</name>
+			<url>scp://project.dev.china-rewards.com/var/www/hr/ear</url>
+		</site>
+	</distributionManagement>
+	<dependencies>
+			<dependency>
+				<groupId>com.chinarewards</groupId>
+				<artifactId>common-web</artifactId>
+				<version>2.2.0</version>
+			</dependency>
+		<!-- China Rewards Stuff STARTS -->
+		<dependency>
+			<groupId>com.chinarewards</groupId>
+			<artifactId>license-server-war</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>com.chinarewards</groupId>
+			<artifactId>license-server-core</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.chinarewards</groupId>
+			<artifactId>license-server-model</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!-- China Rewards Stuff ENDS -->
+
+
+		<!-- Transitive dependency from hr-war STARTS -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.customware.gwt.dispatch</groupId>
+			<artifactId>gwt-dispatch</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-servlet</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code</groupId>
+			<artifactId>kaptcha</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<!-- Transitive dependency from hr-war ENDS -->
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+
+		<!-- We need to exclude all SLF4J api since JBoss 5 has it. -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- jexcelapi start which provides api to export excel -->
+			<dependency>
+				<groupId>net.sourceforge.jexcelapi</groupId>
+				<artifactId>jxl</artifactId>
+			</dependency>
+			<!-- jexcelapi end -->
+			
+			<!-- gchart start which supports supports line, pie, bar, area, and combination 
+			charts, popups, mouse events, and more -->
+			<dependency>	
+				<groupId>com.googlecode.gchart</groupId>
+				<artifactId>gchart</artifactId>
+			</dependency>
+		<!-- gchart end -->
+		<!-- gwt upload dependency start -->
+		<dependency>
+        	<groupId>com.googlecode.gwtupload</groupId>
+        	<artifactId>gwtupload</artifactId>
+		</dependency>
+		<!-- gwt upload dependency end -->
+		<!-- gwt incubator start -->
+		<dependency>
+		    <groupId>com.google.gwt</groupId>
+		    <artifactId>gwt-incubator</artifactId>
+		</dependency>
+		<!-- gwt incubator end -->
+		
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		
+	</dependencies>
+	<organization>
+		<name>China Rewards</name>
+		<url>http://corp.china-rewards.com</url>
+	</organization>
+	<build>
+		<plugins>
+				<plugin>
+					<groupId>com.chinarewards.maven.plugins</groupId>
+					<artifactId>maven-appinfo-plugin</artifactId>
+					<version>0.1.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>appinfo</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<defaultJavaBundleDir>lib/</defaultJavaBundleDir>
+					<modules> <!-- Configuring names of artifacts in EAR -->
+						<webModule>
+							<groupId>com.chinarewards</groupId>
+							<artifactId>license-server-war</artifactId>
+							<contextRoot>/license-server</contextRoot>
+							<bundleFileName>license-server-war.war</bundleFileName>
+						</webModule>
+					</modules>
+					
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

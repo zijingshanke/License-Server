@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:d='urn:import:com.google.gwt.user.datepicker.client'>
+
+	<ui:style src="new2.css" field="new2"></ui:style>
+
+	<g:HTMLPanel styleName="{new2.frame-wrap}">
+		<!--面包屑 [[ -->
+		<g:FlowPanel ui:field="breadCrumbs" />
+		<!--面包屑 ]] -->
+		<h3>查看礼品
+		</h3>
+		<span class="{new2.cutline}"></span>
+		<!-- 1内容 -->
+		<div class="{new2.content-wrap}">
+			<div class="{new2.form}">
+
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">礼品名称：</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="name" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						礼品概述：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="summary" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						发货周期：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="dispatchcycle" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						兑换说明：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="explains" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						注意事项：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="notes" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						礼品类型：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="typeText" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						品牌：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="brand" />
+					</div>
+				</div>
+
+				<div class="{new2.form-line}">
+					<label class="{new2.label60}">
+						礼品图片：
+					</label>
+					<div class="{new2.element}">
+						<g:Image ui:field="giftImage" width="80px" height="60px"
+							visible="false" />
+					</div>
+				</div>
+
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						<span>*</span>
+						兑换积分：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="integral" />
+					</div>
+				</div>
+
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						<span>*</span>
+						库存：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="stock" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						供货方式：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="source" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						供应商名称：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="business" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						供应商地址：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="address" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						供应商电话：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="tell" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						服务电话：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="servicetell" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						有效期：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="indate" />
+					</div>
+				</div>
+				<span class="{new2.cutline}"></span>
+				<div class="{new2.form-line} {new2.form-line-btn}">
+					<div class="{new2.element}">
+						<span class="{new2.btn}">
+							<g:Button ui:field="back" styleName="button-ok">返回 </g:Button>
+						</span>
+						<span class="{new2.nbsp}"></span>
+						<span class="{new2.btn}">
+							<g:Button ui:field="update" styleName="button-ok">修改 </g:Button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

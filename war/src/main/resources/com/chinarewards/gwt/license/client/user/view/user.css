@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+@external .button-add,.button-search,.button-reset,.button-act,.button-log,.button-modp,.button-chose;
+
+/*修改*/
+@sprite .button-mod{ padding-left:10px;gwt-image:"button_mod"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer}
+/*激活*/
+@sprite .button-act{ padding-left:10px;gwt-image:"button_act"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer}
+/*重置*/
+@sprite .button-reset{ padding-left:10px;gwt-image:"button_reset"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer}
+/*查询*/
+@sprite .button-search{ padding-left:10px;gwt-image:"button_search"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer}
+/*注销*/
+@sprite .button-log{ padding-left:10px;gwt-image:"button_log"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer}
+/*新增*/
+@sprite .button-add{ padding-left:10px;gwt-image:"button_add"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer}
+/*密码重置*/
+@sprite .button-modp{ padding-left:10px;gwt-image:"button_mod"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:85px; height:22px; line-height:22px; cursor:pointer}
+/*选择*/
+@sprite .button-chose{ padding-left:10px;gwt-image:"button_chose"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:60px; height:22px; line-height:22px; cursor:pointer; margin-left:15px;}
+
+@sprite #post{ width:97%; height:36px; padding:10px 0px 0px 0px; border:1px solid #ccccff; margin:0 auto; gwt-image:"post_bg"; margin-bottom:5px;}

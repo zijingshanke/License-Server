@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:d='urn:import:com.google.gwt.user.datepicker.client'>
+
+	<ui:style src="new2.css" field="new2"></ui:style>
+	<g:HTMLPanel>
+	<div class="{new2.frame-wrap}">
+			<!--面包屑 [[ -->
+			<div class="{new2.breadcrumb-wrap}">
+				<div class="{new2.breadcrumb-wrap}">
+					<p class="{new2.breadcrumb-left}">
+						<g:FlowPanel ui:field="titleText" />
+					</p>
+					<g:Anchor ui:field="goHistory" styleName="{new2.breadcrumb-right} {new2.back-btn}" text="返回上一页" />
+				</div>
+				<span class="{new2.cutline}"></span>
+			</div>
+			<!--面包屑 ]] -->
+	</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

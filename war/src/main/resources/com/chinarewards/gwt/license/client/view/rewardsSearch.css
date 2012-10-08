@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+@external .button-search,.button-rewards;
+	
+@sprite .button-rewards{ padding-left:10px;gwt-image:"button_add"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:80px; height:22px; line-height:22px; cursor:pointer}
+@sprite .button-search{ padding-left:10px;gwt-image:"button_search"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:70px; height:22px; line-height:22px; cursor:pointer}
+
+#fmdiv{ background-color:#FFF; border:1px solid #9bb1be; overflow-y:scroll; height:600px; width: 1400px;}
+.fmtable{ width:97%; margin:5px auto; border:1px solid #ccccff; background-color:#f4f6f9;}
+.fmtable td{color:#444; height:25px; padding:4px 0px; font-size:12px;}
+.fmtable td.title{ text-align:right; margin-right:5px; }
+.fmtable td.intext{ text-align:left;}
+.fmtable td.caozuo{ text-align:center;}
+.fmtable td.intext2 input{border:1px solid #b4c6d0;line-height:18px; height:20px; width:100px;}
+
+.listtable{width:97%; margin:5px auto 0 auto;}
+
+@sprite #post{ width:97%; height:36px; padding:10px 0px 0px 0px; border:1px solid #ccccff; margin:0 auto; gwt-image:"post_bg"; margin-bottom:5px;}
+#post button{ margin-left:15px;}
+
+div.center{ width:428px;border-bottom:none; padding:10px; background-color:#fff; color:#444; font-size:14px; line-height:18px;}

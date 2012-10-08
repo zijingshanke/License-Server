@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:d='urn:import:com.google.gwt.user.datepicker.client'>
+
+	<ui:style src="new2.css" field="new2"></ui:style>
+
+	<g:HTMLPanel styleName="{new2.frame-wrap}">
+		<!--面包屑 [[ -->
+		<g:FlowPanel ui:field="breadCrumbs" />
+		<!--面包屑 ]] -->
+		<h3>查看授权信息
+		</h3>
+		<span class="{new2.cutline}"></span>
+		<!-- 1内容 -->
+		<div class="{new2.content-wrap}">
+			<div class="{new2.form}">
+
+				<div class="{new2.form-line}" >
+					<label class="{new2.label}">客户识别号：</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="corporationId" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						客户名称：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="corporationName" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						授权类型：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="licenseType" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						最大用户数：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="staffNumber" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						绑定网卡：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="macaddress" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						有效期：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="notafter" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						说明：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="description" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						授权人：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="awarduser" />
+					</div>
+				</div>
+				<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						授权时间：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="issued" />
+					</div>
+				</div>
+					<div class="{new2.form-line}">
+					<label class="{new2.label}">
+						授权文件：
+					</label>
+					<div class="{new2.element}">
+						<g:Label text="等待数据加载..." ui:field="licenseFileName" />
+					</div>
+				</div>
+				
+				<span class="{new2.cutline}"></span>
+				<div class="{new2.form-line} {new2.form-line-btn}">
+					<div class="{new2.element}">
+						<span class="{new2.btn}">
+							<g:Button ui:field="back" styleName="button-ok">返回 </g:Button>
+						</span>
+						<span class="{new2.nbsp}"></span>
+						<span class="{new2.btn}">
+							<g:Button ui:field="update" styleName="button-ok">修改 </g:Button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

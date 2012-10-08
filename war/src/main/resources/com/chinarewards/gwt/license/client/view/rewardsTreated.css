@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+@external .text;
+
+@sprite .text{ gwt-image: "input_text"; border:1px solid #ccc; width:450px; color:#666; line-height:20px; vertical-align:middle; color:#666; margin-right:5px;}
+
+.detail-content{width:97%; min-height:380px; height:auto!important; heigt:380px; padding:0px; border:1px solid #ccccff; margin:0 auto; background:#fbfdff; margin-top:8px; position:relative; clear:both}
+.detail-content .setDetail{ width:97%; margin:15px auto; position:relative}
+.detail-content .setDetail h3{ font-size:14px; font-weight:bold; color:#444; display:block; height:22px; line-height:22px;}
+.detail-content .setDetail div.mmdiv{ border:1px solid #ccccff; background-color:#fff; position:relative; width:100%; padding:10px 0px; }
+.detail-content .setDetail table.mmtable{ border:1px solid #ccccff; background-color:#fff; position:relative}
+.detail-content .setDetail table.mmtable td{ height:25px; line-height:25px; font-size:12px; padding-top:3px; padding-bottom:3px;}
+.detail-content .setDetail table.mmtable .title{ background-color:#eaf4ff; text-align:right; width:120px;}
+.detail-content .setDetail table.mmtable .title span{ color:#F00}
+.detail-content .setDetail table.mmtable .intext{ text-align:left; padding-left:5px;}
+.detail-content .setDetail table.mmtable textarea.text{ text-align:left; padding-left:5px; height:auto!important; }
+.detail-content .setDetail table.mmtable textarea.text{ text-align:left; padding-left:5px; height:auto!important; }
+
+@sprite #post{ width:97%; height:36px; padding:10px 0px 0px 0px; border:1px solid #ccccff; margin:0 auto; gwt-image:"post_bg"; margin-bottom:5px; border-top: 0}
+#post button{ margin-left:15px;}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:d='urn:import:com.google.gwt.user.datepicker.client'>
+	<ui:image field="button_ok" resource="button_ok.jpg"></ui:image>
+	<ui:image field="post_bg" resource="post_bg.jpg" repeatStyle="Horizontal"></ui:image>
+	<ui:style src="new2.css" field="new2"></ui:style>
+	<g:HTMLPanel>
+
+
+
+		<div class="{new2.box}">
+			<div class="{new2.box-context}">
+				<div class="{new2.box-info}">
+					<div>
+						忘记了密码，若要找回：
+					</div>
+					<div>
+						<ul>
+							<li>，请拨打客户服务热线（400 6688 998）；</li>
+						</ul>
+					</div>
+
+
+				</div>
+				<div class="{new2.box-tools}">
+					<g:Button ui:field="ok" text="确定" styleName="{new2.box-btn-ok}" />
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

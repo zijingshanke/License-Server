@@ -1,0 +1,345 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.chinarewards</groupId>
+	<artifactId>license-server</artifactId>
+	<packaging>pom</packaging>
+	<name>License-Server Root Project</name>
+	<version>1.0-SNAPSHOT</version>
+
+	<parent>
+		<artifactId>root</artifactId>
+		<groupId>com.chinarewards</groupId>
+		<version>2.1.0</version>
+	</parent>
+
+	<properties>
+		<gwt.version>2.4.0</gwt.version>
+		<guice.version>3.0</guice.version>
+		<gin.version>1.5</gin.version>
+		<jxl.version>2.6.10</jxl.version>
+		<jersey.version>1.1.5</jersey.version>
+		<!-- SLF4J Settings -->
+		<slf4j.version>1.5.10</slf4j.version>
+		<!-- Log4J Settings -->
+		<log4j.version>1.2.14</log4j.version>
+		<source.version>1.6</source.version>
+		<encoding>UTF-8</encoding>
+
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.chinarewards</groupId>
+				<artifactId>common-web</artifactId>
+				<version>2.2.0</version>
+			</dependency>
+			<!-- Hibernate STARTS -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-annotations</artifactId>
+				<version>3.4.0.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.3.2.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>3.4.0.GA</version>
+			</dependency>
+			<!-- Hibernate ENDS -->
+
+			<!-- Logging STARTS -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+
+			<!-- GWT dependencies (from central repo) -->
+			<dependency>
+				<groupId>com.google.gwt</groupId>
+				<artifactId>gwt-servlet</artifactId>
+				<version>${gwt.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.gwt</groupId>
+				<artifactId>gwt-user</artifactId>
+				<version>${gwt.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gwt-log</groupId>
+				<artifactId>gwt-log</artifactId>
+				<version>3.0.4</version>
+			</dependency>
+			<dependency>
+				<groupId>com.googlecode.gwt.inject</groupId>
+				<artifactId>gin</artifactId>
+				<version>${gin.version}</version>
+			</dependency>
+			<!-- Dependency injection engine -->
+			<dependency>
+				<groupId>com.google.inject</groupId>
+				<artifactId>guice</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-servlet</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-jndi</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-assistedinject</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-persist</artifactId>
+				<version>${guice.version}</version>
+			</dependency>
+			<!-- Hibernate STARTS -->
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>ejb3-persistence</artifactId>
+				<version>1.0.2.GA</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>4.0.2.GA</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>5.8</version>
+				<classifier>jdk15</classifier>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>1.8.0.7</version>
+			</dependency>
+			<dependency>
+				<groupId>concurrent</groupId>
+				<artifactId>concurrent</artifactId>
+				<version>1.3.4</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>1.8.1</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- jexcelapi start which provides api to export excel -->
+			<dependency>
+				<groupId>net.sourceforge.jexcelapi</groupId>
+				<artifactId>jxl</artifactId>
+				<version>${jxl.version}</version>
+			</dependency>
+			<!-- jexcelapi end -->
+			<dependency>
+				<groupId>net.customware.gwt.dispatch</groupId>
+				<artifactId>gwt-dispatch</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+
+			<!-- gchart start which supports supports line, pie, bar, area, and combination 
+				charts, popups, mouse events, and more -->
+			<dependency>
+				<groupId>com.googlecode.gchart</groupId>
+				<artifactId>gchart</artifactId>
+				<version>2.7</version>
+			</dependency>
+			<!-- gchart end -->
+
+			<!-- gwt upload start -->
+			<dependency>
+				<groupId>com.googlecode.gwtupload</groupId>
+				<artifactId>gwtupload</artifactId>
+				<version>0.6.3-compat</version>
+			</dependency>
+			<!-- gwt upload end -->
+
+			<!-- gwt incubator start -->
+			<dependency>
+				<groupId>com.google.gwt</groupId>
+				<artifactId>gwt-incubator</artifactId>
+				<version>2.0.1</version>
+			</dependency>
+			<!-- gwt incubator end -->
+
+			<!-- Charting -->
+			<dependency>
+				<groupId>jfree</groupId>
+				<artifactId>jfreechart</artifactId>
+				<version>1.0.13</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>1.6</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>aopalliance</groupId>
+				<artifactId>aopalliance</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.8.3</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.geronimo.specs</groupId>
+				<artifactId>geronimo-ejb_3.0_spec</artifactId>
+				<version>1.0.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.openejb</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>5.0-1</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.code</groupId>
+				<artifactId>kaptcha</artifactId>
+				<version>2.3</version>
+			</dependency>
+			<dependency>
+				<groupId>com.kfuntak.gwt.json</groupId>
+				<artifactId>gwtprojsonserializer</artifactId>
+				<version>1.0.3</version>
+			</dependency>
+
+			<!-- license -->
+			<dependency>
+				<groupId>de.schlichtherle.truelicense</groupId>
+				<artifactId>truelicense-core</artifactId>
+				<version>1.31</version>
+			</dependency>
+			<dependency>
+				<groupId>de.schlichtherle.truelicense</groupId>
+				<artifactId>truelicense-xml</artifactId>
+				<version>1.31</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.3</version>
+			</dependency>
+			<!-- license end -->
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.chinarewards.maven.plugins</groupId>
+				<artifactId>maven-appinfo-plugin</artifactId>
+				<version>0.1.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>appinfo</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.7.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-report-plugin</artifactId>
+					<version>2.7.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>gwt-maven-plugin</artifactId>
+					<version>2.1.0-1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<configuration>
+						<argLine>-Xmx3048m</argLine>
+						<disableXmlReport>true</disableXmlReport>
+					</configuration>
+				</plugin>
+
+				<!-- maven-eclipse-plugin -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.8</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.7.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
+	<description>license-server Root Project</description>
+	<url>http://project.dev.china-rewards.com/hr/</url>
+
+	<modules>
+		<module>model</module>
+		<module>core</module>
+		<module>war</module>
+		<module>ear</module>
+	</modules>
+</project>

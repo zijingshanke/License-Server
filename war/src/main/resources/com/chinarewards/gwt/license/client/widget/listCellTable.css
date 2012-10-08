@@ -1,0 +1,131 @@
+.cellTableWidget {
+  border:1px solid #ccccff;
+  font-size:12px;
+}
+
+/*
+.cellTable {
+  border:1px solid #ccccff;
+  font-size:12px;
+}
+*/
+
+.cellTableFirstColumn {
+  
+}
+
+@sprite .cellTableFooter {
+  gwt-image: 'cellTableFooterBackground';
+  background-color: #b4d0f8;
+  border-top: 1px solid #88b0f2;
+  border-left: 1px solid #88b0f2;
+  border-right: 1px solid #eef;
+  padding: 0px 10px;
+  text-align: left;
+  color: #4b4a4a;
+  text-shadow: #ddf 1px 1px 0
+}
+
+@sprite .cellTableHeader {
+  
+  gwt-image: 'cellTableHeaderBackground';
+  background-color: #fafafa;
+  border-bottom: 1px solid #ccccff;
+  border-left: 1px solid #f8fff8;
+  border-right: 1px solid #aee7b0;
+  padding: 0px 10px;
+  text-align: left;
+  color: #336633;
+  text-shadow: #ddf 1px 1px 0; 
+  
+  
+}
+
+.cellTableCell {
+  padding: 4px 10px;
+}
+
+.cellTableFirstColumn {
+  
+}
+
+.cellTableLastColumn {
+  
+}
+
+
+.cellTableFirstColumnFooter {
+  border-left: 0px;
+}
+
+.cellTableFirstColumnHeader {
+  border-left: 0px;
+}
+
+.cellTableEvenRow {
+  background-color: #ffffff;
+}
+
+.cellTableEvenRowCell {
+  border: selectionBorderWidth solid #ffffff;
+}
+
+.cellTableOddRow {
+  background-color: #eef4fb;
+}
+
+.cellTableOddRowCell {
+  border: selectionBorderWidth solid #eef4fb;
+}
+
+.cellTableHoveredRow {
+  background-color: #88b0f2;
+}
+
+.cellTableHoveredRowCell {
+  border: selectionBorderWidth solid #88b0f2;
+}
+
+.cellTableKeyboardSelectedRow {
+  background: #ffc;
+}
+
+.cellTableKeyboardSelectedRowCell {
+  border: selectionBorderWidth solid #ffc;
+}
+
+
+@sprite .cellTableSelectedRow {
+  gwt-image: 'cellTableSelectedBackground';
+  background-color: #628cd5;
+  color: white;
+  height: auto;
+  overflow: auto;
+}
+
+.cellTableSelectedRowCell {
+  border: selectionBorderWidth solid #628cd5;
+}
+
+/**
+ * The keyboard selected cell is visible over selection.
+ */
+.cellTableKeyboardSelectedCell {
+  border: selectionBorderWidth solid #d7dde8;
+}
+
+
+.cellTableLastColumn {
+}
+
+.cellTableLastColumnFooter {
+}
+
+.cellTableLastColumnHeader {
+	border-right: 0px;
+}
+
+@sprite .cellTableLoading {
+  gwt-image: 'cellTableLoading';
+  margin: 30px;
+}

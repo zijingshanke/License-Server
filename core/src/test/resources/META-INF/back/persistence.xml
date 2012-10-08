@@ -1,0 +1,85 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit name="license" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- JPA entities must be registered here -->
+
+		<!-- user -->
+		<class>com.chinarewards.license.domain.user.SysUser</class>
+		<class>com.chinarewards.license.domain.user.SysRole</class>
+		<class>com.chinarewards.license.domain.user.SysUserRole</class>
+
+		<!-- org -->
+		<class>com.chinarewards.license.domain.org.OrgInit</class>
+		<class>com.chinarewards.license.domain.org.Organization</class>
+		<class>com.chinarewards.license.domain.org.Corporation</class>
+		<class>com.chinarewards.license.domain.org.Department</class>
+		<class>com.chinarewards.license.domain.org.manager.DepartmentManager</class>
+		<class>com.chinarewards.license.domain.org.Industry</class>
+		<class>com.chinarewards.license.domain.org.OrgPolicy</class>
+		<class>com.chinarewards.license.domain.org.Staff</class>
+		<class>com.chinarewards.license.domain.org.Team</class>
+        <class>com.chinarewards.license.domain.org.Members</class>
+		<!-- reward -->
+		<class>com.chinarewards.license.domain.reward.base.Reward</class>
+		<class>com.chinarewards.license.domain.reward.base.RewardItem</class>
+		<class>com.chinarewards.license.domain.reward.base.RewardItemStore</class>
+		<class>com.chinarewards.license.domain.reward.base.RewardItemType</class>
+		<class>com.chinarewards.license.domain.reward.frequency.DayFrequency</class>
+		<class>com.chinarewards.license.domain.reward.frequency.Frequency</class>
+		<class>com.chinarewards.license.domain.reward.frequency.MonthFrequency</class>
+		<class>com.chinarewards.license.domain.reward.frequency.WeekFrequency</class>
+		<class>com.chinarewards.license.domain.reward.frequency.WeekFrequencyDays</class>
+		<class>com.chinarewards.license.domain.reward.frequency.YearFrequency</class>
+		<class>com.chinarewards.license.domain.reward.person.Candidate</class>
+		<class>com.chinarewards.license.domain.reward.person.Judge</class>
+		<class>com.chinarewards.license.domain.reward.person.Nominee</class>
+		<class>com.chinarewards.license.domain.reward.person.NomineeLot</class>
+		<class>com.chinarewards.license.domain.reward.person.PreWinner</class>
+		<class>com.chinarewards.license.domain.reward.person.PreWinnerLot</class>
+		<class>com.chinarewards.license.domain.reward.person.Winner</class>
+		<class>com.chinarewards.license.domain.reward.rule.CandidateRule</class>
+		<class>com.chinarewards.license.domain.reward.rule.DirectCandidateData</class>
+		<class>com.chinarewards.license.domain.reward.rule.DirectCandidateRule</class>
+		<class>com.chinarewards.license.domain.reward.rule.DobRule</class>
+
+		<!-- transaction -->
+		<class>com.chinarewards.license.tx.domain.Account</class>
+		<class>com.chinarewards.license.tx.domain.AccountBalance</class>
+		<class>com.chinarewards.license.tx.domain.Transaction</class>
+		<class>com.chinarewards.license.tx.domain.TransactionDetail</class>
+		<class>com.chinarewards.license.tx.domain.TxUnit</class>
+        <!-- gift -->
+        <class>com.chinarewards.license.domain.gift.Gift</class>
+        <!-- order -->
+        <class>com.chinarewards.license.domain.order.Orders</class>
+         <!-- budget -->
+        <class>com.chinarewards.license.domain.budget.CorpBudget</class>
+        <class>com.chinarewards.license.domain.budget.DepartmentBudget</class>
+        <!-- information -->
+		<class>com.chinarewards.license.domain.information.Broadcasting</class>
+		<class>com.chinarewards.license.domain.information.DepartmentObject</class>
+		<class>com.chinarewards.license.domain.information.ReceivingObject</class>
+		<class>com.chinarewards.license.domain.information.StaffObject</class>
+		<class>com.chinarewards.license.domain.information.BroadcastReply</class>
+		<class>com.chinarewards.license.domain.information.BroadcastingReceiving</class>
+		<class>com.chinarewards.license.domain.information.OrgObject</class>
+		<class>com.chinarewards.license.domain.information.TeamObject</class>
+		
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.connection.url" value="jdbc:hsqldb:hsql://localhost:9001/mydb" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+
+		</properties>
+	</persistence-unit>
+
+</persistence>

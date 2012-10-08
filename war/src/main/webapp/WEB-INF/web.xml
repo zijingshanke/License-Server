@@ -1,0 +1,87 @@
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>GWT-MVP Demo</display-name>
+
+	<listener>
+		<listener-class>com.chinarewards.gwt.license.server.LicenseServletConfig</listener-class>
+	</listener>
+	<filter>
+		<filter-name>guiceFilter</filter-name>
+		<filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>guiceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+<!-- 验证码 -->
+	<servlet>
+		<servlet-name>Kaptcha</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+		<init-param>
+			<param-name>kaptcha.border</param-name>
+			<param-value>yes</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>4</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>130</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>50</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.char.string</param-name>
+			<param-value>1234567890</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.noise.impl</param-name>
+			<param-value>com.google.code.kaptcha.impl.NoNoise</param-value>
+		</init-param>
+	</servlet>
+	
+	
+	
+	<servlet>
+		<servlet-name>fileupload</servlet-name>
+		<servlet-class>com.chinarewards.gwt.license.util.FileUploadServlet</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>filedownload</servlet-name>
+		<servlet-class>com.chinarewards.gwt.license.util.FileDownloadServlet</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>Kaptcha</servlet-name>
+		<url-pattern>/kaptcha.jpg</url-pattern>
+	</servlet-mapping>
+	<!-- google image end -->
+	
+	<servlet-mapping>
+		<servlet-name>fileupload</servlet-name>
+		<url-pattern>/fileupload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>filedownload</servlet-name>
+		<url-pattern>/filedownload</url-pattern>
+	</servlet-mapping>
+	
+	<!-- AppInfoServer for displaying application version, name... -->
+	<servlet>
+		<servlet-name>appinfo</servlet-name>
+		<servlet-class>com.chinarewards.common.web.appinfo.AppInfoServlet</servlet-class>
+		<load-on-startup>99</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>appinfo</servlet-name>
+		<url-pattern>/appinfo</url-pattern>
+	</servlet-mapping>
+
+</web-app>

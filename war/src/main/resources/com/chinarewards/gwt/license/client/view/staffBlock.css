@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+@external .text,.button-addpe;
+@sprite .text{ gwt-image: "input_text"; border:1px solid #ccc; width:450px; color:#666; line-height:20px; vertical-align:middle; color:#666; margin-right:5px;}
+/*选择奖励员工*/
+@sprite .button-addpe{ padding-left:18px;padding-right:5px;gwt-image:"button_addpe"; border:1px solid #9eb5c2; background-color:#e4f6ff; font-size:12px; color:#123b5e; width:82px; height:22px; line-height:22px; cursor:pointer}
+
+.mmtable1{ border:0px; background-color:#fff; position:relative}
+.mmtable1 td{ height:25px; line-height:25px; font-size:12px;}
+.mmtable1 td.title{ background-color:#eaf4ff; text-align:right; width:120px;}
+.mmtable1 td.title span{ color:#F00}
+.mmtable1 td.intext{ text-align:left; padding-left:5px;width: 500px;}
+#noPaddingTd {height:25px; line-height:25px; font-size:12px; padding-top:0px; padding-bottom:0px;}
+#specialTextCss input{text-align:left; padding-left:5px;width: 260px;}

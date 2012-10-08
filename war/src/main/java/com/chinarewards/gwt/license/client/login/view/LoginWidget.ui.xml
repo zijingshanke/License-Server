@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+	<ui:image field="login_bg" resource="login_bg.jsp"
+		repeatStyle="Horizontal"></ui:image>
+	<ui:image field="login" resource="login.jpg" repeatStyle="Horizontal"></ui:image>
+	<ui:image field="login_text" resource="login_text.jpg"></ui:image>
+	<ui:image field="input_text2" resource="input_text2.jpg"></ui:image>
+	<ui:image field="login_sub" resource="login_sub.jpg"></ui:image>
+	<ui:style src="login.css"></ui:style>
+	<ui:style src="new2.css" field="new2"></ui:style>
+	<g:ScrollPanel styleName="{new2.login}">
+		<g:HTMLPanel styleName="{new2.login}">
+			<div class="{new2.login}">
+				<div class="{new2.login-wrap}">
+					<div class="{new2.login-top}"></div>
+					<div class="{new2.login-content}">
+						<div class="{new2.logo}"></div>
+						<span class="{new2.sep}"></span>
+						<div class="{new2.login-form}">
+							<div class="{new2.form}">
+								<div class="{new2.form-line}">
+									<label class="{new2.label}">账号：</label>
+									<div class="{new2.element}">
+										<g:TextBox maxLength="30" ui:field="username"
+											styleName="{new2.text}" />
+									</div>
+								</div>
+
+								<div class="{new2.form-line}">
+									<label class="{new2.label}">密码：</label>
+									<div class="{new2.element}">
+										<g:PasswordTextBox ui:field="password"
+											styleName="{new2.text}" />
+										<g:Anchor ui:field="forgetPwd" text="忘记密码？" styleName="{new2.anchor}"></g:Anchor>
+									</div>
+								</div>
+
+								<div class="{new2.form-line}">
+									<label class="{new2.label}">验证码：</label>
+									<div class="{new2.element}">
+										<g:TextBox maxLength="30" ui:field="codeCheck"
+											styleName="{new2.text} {new2.short-text}"></g:TextBox>
+										<g:Image ui:field="verifyImage" styleName="verifyImage"></g:Image>
+										<g:Anchor ui:field="prompt" text="看不清？" styleName="{new2.anchor}"></g:Anchor>
+
+									</div>
+								</div>
+
+
+
+								<div class="{new2.form-line} {new2.form-line-btn}">
+									<div class="{new2.element}">
+										<span class="{new2.login-btn}">
+											<g:Button ui:field="loginButton">登 录</g:Button>
+										</span> 
+										 
+										<input type="checkbox" checked="true" />
+										 下次自动登录
+										 <g:Anchor  styleName="{new2.anchor}" text="设置" /> <g:Anchor  styleName="{new2.anchor}" text="注册企业" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="{new2.login-bottom}"></div>
+				</div>
+			</div>
+		</g:HTMLPanel>
+	</g:ScrollPanel>
+</ui:UiBinder>

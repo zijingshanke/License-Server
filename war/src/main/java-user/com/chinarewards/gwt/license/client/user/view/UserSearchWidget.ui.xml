@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:d="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:image field="button_search" resource="button_search.jpg"></ui:image>
+	<ui:image field="button_mod" resource="button_mod.jpg"></ui:image>
+	<ui:image field="button_act" resource="button_act.jpg"></ui:image>
+	<ui:image field="button_log" resource="button_log.jpg"></ui:image>
+	<ui:image field="button_reset" resource="button_reset.jpg"></ui:image>
+	<ui:image field="button_add" resource="button_add.jpg"></ui:image>
+	<ui:image field="button_chose" resource="button_chose.jpg"></ui:image>
+	<ui:image field="post_bg" resource="post_bg.jpg" repeatStyle="Horizontal"></ui:image>
+	<ui:style src="myMain.css"></ui:style>
+	<ui:style src="user.css" field="other"></ui:style>
+	<ui:style src="new2.css" field="new2"></ui:style>
+	<g:HTMLPanel>
+	<div class="{new2.frame-wrap}">
+			<!--面包屑 [[ -->
+			<div class="{new2.breadcrumb-wrap}">
+				<div class="{new2.breadcrumb-wrap}">
+					<p class="{new2.breadcrumb-left}">
+						<a href="#" style="color:#565656;text-decoration:none;">员工数据</a>
+						->
+						<span>帐号管理</span>
+					</p>
+					<a href="#" class="{new2.breadcrumb-right} {new2.back-btn}"
+						style="color:#565656;text-decoration:none;">返回上一页</a>
+				</div>
+				<span class="{new2.cutline}"></span>
+			</div>
+			<!--面包屑 ]] -->
+
+			<!--查询条件 [[ -->
+			<div class="{new2.query-wrap}">
+				<div class="{new2.form}">
+					<label for="">账号名称：</label><span class="{new2.nbsp}"></span>
+					<g:TextBox maxLength="10" ui:field="accountName" styleName="{new2.text}" />
+					<span class="{new2.nbspbig}"></span>
+					
+										<label for="">手机号码：</label><span class="{new2.nbsp}"></span>
+					<g:TextBox maxLength="11" ui:field="mobile" styleName="{new2.text}" />
+					<span class="{new2.nbspbig}"></span>
+					
+										<label for="">电子邮箱：</label><span class="{new2.nbsp}"></span>
+					<g:TextBox maxLength="50" ui:field="email" styleName="{new2.text}" />
+					<span class="{new2.nbspbig}"></span>
+					<br></br><br></br>
+										<label for="">关联企业名称：</label><span class="{new2.nbsp}"></span>
+					<g:TextBox maxLength="30" ui:field="enterpriseName" styleName="{new2.text}" />
+					<span class="{new2.btn}">
+						<g:Button ui:field="choose" text="选择" />
+					</span>
+					
+					<span class="{new2.nbspbig}"></span>
+	
+					<label for="">状　　态：</label>
+					<span class="{new2.nbsp}"></span>
+					<g:ListBox ui:field="status" styleName="{new2.select}" />
+					<span class="{new2.nbspbig}"></span>
+
+					<span class="{new2.nbspbig}"></span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="search" text="查询" />
+					</span>
+										<span class="{new2.btn}">
+						<g:Button ui:field="reset" text="重置" />
+					</span>
+				</div>
+			</div>
+			<!--查询条件 ]] -->
+
+
+			<span class="{new2.cutline}"></span>
+			<div class="{new2.divtext}">共有 <g:InlineLabel ui:field="dataCount" styleName="{new2.divfont}"></g:InlineLabel> 人</div><div  class="{new2.divend}"></div>
+			<div class="{new2.table}">
+				<g:FlowPanel ui:field="result" />
+			</div>
+
+
+			<!--分页 [[ -->
+			<div id="rewardlist_page" class="{new2.pager}">
+			<span class="{new2.btn}">
+						<g:Button ui:field="add" text="新增" />
+					</span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="Update" text="修改" />
+					</span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="active" text="激活" />
+					</span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="logOff" text="注销" />
+					</span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="delete" text="离职" />
+					</span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="resetPwd" text="密码重置" />
+					</span>
+			</div>	
+					
+			
+			<div id="rewardlist_page" class="{new2.pager}">
+				<div class="{new2.pager-left}">
+					每页显示条数
+					<select class="{new2.select}">
+						<option>10</option>
+					</select>
+				</div>
+
+				<div class="{new2.pager-right}">
+					<g:FlowPanel ui:field="resultpage" />
+				</div>
+			</div>
+			<!--分页 ]] -->
+
+		</div>
+		
+
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+#fmdiv{ background-color:#FFF; border:1px solid #9bb1be; overflow-y:scroll; height:600px; width: 1400px;}
+.fmtable{ width:97%; margin:5px auto; border:1px solid #ccccff; background-color:#f4f6f9;}
+.fmtable td{color:#444; height:25px; padding:4px 0px; font-size:12px;}
+.fmtable td.title{ text-align:right; margin-right:5px; }
+.fmtable td.intext{ text-align:left;}
+.fmtable td.caozuo{ text-align:center;}
+
+.fmtable input{ border:1px solid #b4c6d0;line-height:18px; height:20px; width:100px;}
+.fmtable select{ border:1px solid #b4c6d0;  line-height:18px; height:20px; width:100px;}
+
+.listtable{width:97%; margin:5px auto 0 auto;}
+
+#post button{ margin-left:15px;}
+
+div.center{ width:428px;border-bottom:none; padding:10px; background-color:#fff; color:#444; font-size:14px; line-height:18px;}
+div.center td{height: 28px}
+div.center input{width: 200px}
+div.center textarea{width: 200px}

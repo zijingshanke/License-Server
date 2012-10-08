@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+@external .help,.log,.exit,.help-over,.log-over,.exit-over,.help-down,.log-down,.exit-down;
+
+@sprite .td-center{gwt-image:"center"; font-size:12px}	
+
+/*头部样式*/
+@sprite #header{ height:50px; width:100%; padding:8px 0px 0px 0px; gwt-image:"topbg";}
+#header img{ margin-left:12px;}
+#header ul{ width:200px; float:right; height:41px; margin:0px; padding:0px; list-style:none;}
+#header ul li{ width:100px; float:left; height:41px;  margin:0px; padding:0px;}
+@sprite .help{gwt-image:"help"; cursor:pointer; border:0}
+@sprite .log{gwt-image:"log"; cursor:pointer; border:0}
+@sprite .exit{gwt-image:"exit";cursor:pointer; border:0}
+@sprite .help-over{gwt-image:"helpover"; cursor:pointer}
+@sprite .log-over{gwt-image:"logover"; cursor:pointer}
+@sprite .exit-over{gwt-image:"exitover"; cursor:pointer}
+@sprite .help-down{gwt-image:"helpdown";cursor:pointer}
+@sprite .log-down{gwt-image:"logdown";cursor:pointer}
+@sprite .exit-down{gwt-image:"exitdown";cursor:pointer}
+@sprite #header02{height:23px; width:100%; padding:7px 0px 0px 0px; gwt-image:"top02"; color:#FFF; font-weight:bold; font-size:12px; padding-left:25px}
+
+/*主题内容样式开始*/
+#container{ width:100%; background-color:#e8e9ed;}
+/*左边的导航样式*/
+@sprite div.title{ gwt-image:"title02";background:url("license/images/elt_repeat.png") repeat-x 0 -3px;height:28px;line-height:28px;font-size:14px;font-weight:bold;color:#000000;margin-left:1px;padding-left:35px;border:1px solid #74944B;position:relative;}
+@sprite #title03{ width:5px; height:33px; gwt-image:"title03";padding:0;}
+div.title img{ margin-right:10px;}
+
+
+/*默认情况样式*/
+#menu{ width:191px; border:1px solid #9bb1be;border:1px solid #74944B;border-top:none;border-bottom:none; margin-left:1px;height: 100%;}
+#menu table{ padding:0; margin:0 ; list-style-type:none;}
+#menu table td{margin:0; width:205px; height:31px;  font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; overflow:hidden; clear:both; cursor:pointer}
+#menu table td.last{ border-bottom:1px solid #9bb1be;}
+/*选中时航样式*/
+#menu ul li.selected{ background:url(../images/nav_sec.jpg) repeat-x; border-top:1px solid #9bb1be; color:#fff;}
+/*选中的有子栏目的导航样式*/
+#menu ul li.selectedPare{ background:url(../images/nav_pare.jpg) repeat-x; border-top:1px solid #9bb1be;color:#fff; height:auto}
+/*子栏目的导航样式*/
+#menu ul li.selectedPare ul#submenu{ background-color:#f4f6f9; padding:5px 0 0 0px; margin:0;width:238px; height:auto; position:relative; top:5px; left:-33px; margin-bottom:5px;}
+#menu ul li.selectedPare ul#submenu li{ line-height:22px; height:25px; color:#666; padding:0px 0 0 25px; margin:0;}
+#menu ul li.selectedPare ul#submenu li a{ background:url(../images/hr_71.jpg) no-repeat left center; padding-left:10px; color:#666;text-decoration:none}
+#menu ul li.selectedPare ul#submenu li a:hover{ background:url(../images/hr_70.jpg) no-repeat left center; padding-left:10px; color:#444; font-weight:bold; text-decoration:underline}
+#menu ul li.selectedPare ul#submenu li a.selc{ background:url(../images/hr_70.jpg) no-repeat left center; padding-left:10px; color:#444;text-decoration:none}
+/*左边的导航样式结束*/
+#center{ width:9px; height:100%; background: url(../images/center.jpg) repeat-y; float:left;}
+/*右边的主体样式开始*/
+#main{ margin-top:5px;}
+
+
+
+div#fmdiv{ background-color:#FFF; border:1px solid #9bb1be; overflow-y:scroll}
+.fmtable{ width:97%; margin:5px auto; border:1px solid #ccccff; background-color:#f4f6f9;}
+.fmtable td{color:#444; height:25px; padding:4px 0px; font-size:12px;}
+.fmtable td.title{ text-align:right; margin-right:5px; }
+.fmtable td.intext{ text-align:left;}
+.fmtable td.caozuo{ text-align:center;}
+.fmtable td.caozuo input{ margin-right:5px;}
+.fmtable input{ border:1px solid #b4c6d0; background:url(../images/input_bg.jpg) repeat-x; line-height:18px; height:20px; width:100px;}
+.fmtable select{ border:1px solid #b4c6d0; background:url(../images/input_bg.jpg) repeat-x; line-height:18px; height:22px; width:100px;}
+
+/*底部的样式*/

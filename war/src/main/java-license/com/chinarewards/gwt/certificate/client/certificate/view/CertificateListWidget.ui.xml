@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:d='urn:import:com.google.gwt.user.datepicker.client'
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+
+	<ui:style src="new2.css" field="new2"></ui:style>
+	<g:HTMLPanel>
+		<div class="{new2.frame-wrap}">
+
+			<!--面包屑 [[ -->
+			<g:FlowPanel ui:field="breadCrumbs" />
+			<!--面包屑 ]] -->
+
+			<!--查询条件 [[ -->
+			<div class="{new2.query-wrap}">
+				<div class="{new2.form}">
+					<label for="">状态:</label>
+					<g:ListBox ui:field="status" styleName="{new2.select}" />
+					<span class="{new2.nbspbig}"></span>
+
+					<span class="{new2.nbsp}"></span>
+
+					<label for="">名称:</label>
+					<g:TextBox maxLength="20" ui:field="keyName" styleName="{new2.text}" />
+					<span class="{new2.nbspbig}"></span>
+					<span class="{new2.nbspbig}"></span>
+					<span class="{new2.btn}">
+						<g:Button ui:field="searchBtn" text="查询" />
+					</span>
+
+				</div>
+			</div>
+			<!--查询条件 ]] -->
+			<p class="{new2.send-news}">
+				<div style="float:right;text-align:right;padding-top: 5px;">
+					<span class="{new2.btn}">
+						<g:Button ui:field="addBtn" text="增加授权" />
+					</span>
+					<span class="{new2.nbsp}"></span>
+				</div>
+			</p>
+
+			<span class="{new2.cutline}"></span>
+			<div class="{new2.divtext}">
+				共有
+				<g:InlineLabel ui:field="dataCount" styleName="{new2.divfont}"></g:InlineLabel>
+				件礼品
+			</div>
+			<div class="{new2.divend}"></div>
+			<div class="{new2.table}">
+				<g:FlowPanel ui:field="resultPanel" />
+			</div>
+
+
+			<!--分页 [[ -->
+			<div id="rewardlist_page" class="{new2.pager}">
+				<div class="{new2.pager-left}">
+					每页显示条数
+					<g:ListBox ui:field="pageNumber" styleName="{new2.select}" /> 
+				</div>
+
+				<div class="{new2.pager-right}">
+					<g:FlowPanel ui:field="resultpage" />
+				</div>
+			</div>
+			<!--分页 ]] -->
+
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
